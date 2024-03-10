@@ -55,6 +55,20 @@ async def generate_response(prompt: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to generate response: {str(e)}")
 
+# Define a route for ranking some data
+@app.post("/rank_data/")
+async def generate_response(prompt: str):
+    try:
+        # Generate content based on the prompt
+        response = model.generate_content(prompt)
+
+        # Check if the response has text available
+        if response.text:
+            return {"response": response.text}
+        else:
+            raise HTTPException(status_code=500, detail="Failed to generate response. No text available.")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to generate response: {str(e)}")
 # Run the FastAPI server
 if __name__ == "__main__":
     import uvicorn
