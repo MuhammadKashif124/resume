@@ -11,15 +11,17 @@ Install Dependencies: Make sure you have Python installed on your machine. Then,
 
 bash
 Copy code
-cd generativeai-fastapi-server
+cd resume
 pip install -r requirements.txt
 Configure API Key: Obtain an API key from the GenerativeAI platform and configure it in the code. Replace "AIzaSyDn-Ik881z2rdLz-KOEMwo3v0fauL-Bnx0" with your API key in the genai.configure(api_key="YOUR_API_KEY") line.
 
 Run the Server: Start the FastAPI server by running the main script:
-
+s
 css
 Copy code
-python main.py
+
+python -m uvicorn test:app --reload
+
 Usage
 Once the server is running, you can send HTTP POST requests to the /generate_response/ endpoint with a JSON payload containing the user prompt. The server will generate a response based on the prompt and return it in the response body.
 
@@ -44,9 +46,9 @@ FastAPI: Web framework for building APIs with Python.
 Uvicorn: ASGI server for running FastAPI applications.
 Google GenerativeAI: Library for interacting with the GenerativeAI platform.
 Author
-This FastAPI server is authored by [Your Name].
+This FastAPI server is authored by Muhammad Kashif .
 
 License
-This project is licensed under the [License Name] License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 Feel free to contribute to this project and make it even better! If you encounter any issues, please report them in the GitHub Issues section.
