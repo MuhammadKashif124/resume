@@ -32,7 +32,7 @@ Copy code
 POST /generate_response/
 
 {
-    "prompt": "What is the meaning of life?"
+    "prompt": "give me resume for a Ai engineer I have 3 years of experience and my name is kashif ?"
 }
 Endpoint Details
 URL: /generate_response/
