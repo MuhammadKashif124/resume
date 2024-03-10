@@ -25,7 +25,7 @@ Run the Server:
 Start the FastAPI server by running the main script:
 
 Bash
-python -m uvicorn main:app --reload
+python -m uvicorn test:app --reload
 Use code with caution.
 Usage
 
@@ -36,8 +36,10 @@ Example:
 JSON
 POST /generate_response/
 
+Prefix ttext to add: Genreate resume and cover letter for the following data 
+
 {
-  "prompt": "Write a poem about a robot who falls in love with a human."
+  "prompt": " my name is kashif an an AI enginer with 3 years of experience "
 }
 Use code with caution.
 Endpoint Details
